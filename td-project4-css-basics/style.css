@@ -13,7 +13,7 @@ html {
 .desc {
     display: flex;
     justify-content: space-between;
-    background-image: url(/images/richard-horvath-_nWaeTF6qo0-unsplash.jpg);
+    background-image: url(blue.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1.5rem 2rem;
