@@ -121,6 +121,35 @@ html {
 
 
 
+/* TABLET */
+@media screen and (max-width: 709px) {
+    /* Header section */
+ 
+.desc {
+    width: 100%;
+    
+    flex-direction: column;
+}
+
+    /* Main Section */  
+
+    .color_grouping{
+        flex-direction: column;
+    }
+    .color_grouping div {
+    
+   width: 80%; 
+   margin: 1.5rem;
+font-size: 1rem;
+   
+}
+.color_grouping div:hover {
+   font-size: 1rem;
+} 
+    
+}
+
+/* MOBILE SCREENS */
 @media screen and (max-width: 500px) {
     /* Header section */
  
