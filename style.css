@@ -15,7 +15,8 @@ html {
 nav{
     color: white;
 background-image: linear-gradient(to right top, #0e0750, #070846, #05073b, #060331, #040026);background-image: linear-gradient(to right top, #4a2003, #460f13, #39061f, #240526, #040026);
-
+position: fixed;
+width: 100%;
 }
 
 .container {
@@ -43,11 +44,18 @@ background-image: linear-gradient(to right top, #0e0750, #070846, #05073b, #0603
     cursor: pointer;
 
 }
+.hamburger {
+  display: none;
+}
+.check {
+  display: none;
+}
 /* ABOUT SECTION */
 /* ABOUT SECTION */
 /* ABOUT SECTION */
 
 .title-img {
+  margin-top:2rem ;
     width:20%;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -80,40 +88,29 @@ background-image: linear-gradient(to right top, #0e0750, #070846, #060331, #0400
  display: flex;
  justify-content: space-around;
  align-items: center;
- /* text-align: center; */
   margin: 0 auto;
 
 }
-.skills-item {
-    /* margin: 0 auto; */
-}
+
 .skills-item h2 {
     font-size: 1.2rem;
     display: inline;
     
 }
 .skills-item p {
-    width: 25rem;
-   
-    padding-top: 2rem;
-    font-size: .8rem; 
-    /* margin: 0 auto; */
+      padding-top: 1.2rem;
  
    
 
 }
 .item-1{
-    width: 100%;
-    /* margin-right: 4rem; */
+    width: 40%;
     padding-left: 0rem;
-    margin-left: 6rem;
 }
 .item-2 {
+    width: 40%;
 
-    margin-right: 6rem;
-     font-size: 1.2rem;
-    font-weight: 700;
-     /* text-transform: capitalize; */
+      font-weight: 700; 
    
 }
 .email {
@@ -280,12 +277,69 @@ footer .circle:hover {
 }
 /* mobile Devices */
 @media screen  and (max-width: 583px ){
-    /* Header Section */
-    .container {
-        display: inline;
-        text-align: center;
-        margin: 0 auto;
+      /* HEADER SECTION */
+    .hamburger {
+        display: inline-block;
     }
+    .check {
+      display: none;
+    }
+    .hamburger i {
+        font-size: 1rem;
+        color:white;
+        transform: .3s;
+    }
+    .nav-ul {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        display: block;
+        background-color: rgba(54, 0, 0, 0.7);
+        padding: 2rem ;
+        transform: translateX(-150%);
+        z-index: 11;
+        transition: all .5s;
+
+    }
+    .nav-ul li {
+        margin: 1.5rem;
+        border-bottom:1px solid white;
+        padding-bottom:1rem ;
+    }
+    .nav-ul li a {
+        color: var(--white);
+        transition: all .3s;
+
+    }
+    .nav-ul li a:hover,.nav-ul .current a {
+        margin: 1rem;
+        background-color: transparent;
+        color:#e5e2f9;
+
+    
+}
+
+.nav-ul li a::before{
+    display: none;
+}
+.nav-ul li a::after{
+    display: none;
+}
+
+/* SLIDE MENU WHEN THE HAMBURGER IS CLICKED */
+#toggle:checked ~ .nav-ul {
+    transform: translate(0);
+}
+
+#toggle:checked ~ .hamburger i {
+border: 1px solid black;
+padding: .5rem;
+border-radius: 5px;
+transition: .5s;
+
+}
     .nav-ul {
         text-align: center;
     }
@@ -303,24 +357,60 @@ footer .circle:hover {
     border-radius: 5px;
 }
 
+
+.skills-item h2 {
+    font-size: 1.2rem;
+    
+    
+}
+.skills-item p {
+    width: 25rem;
+   
+    padding-top: 2rem;
+    font-size: 1rem; 
+    /* margin: 0 auto; */
+ 
+   
+
+}
+.item-1{
+    width: 100%;
+    
+}
+.item-2 {
+  width: 100%;
+     font-size: 1.2rem;
+    font-weight: 700;
+     /* text-transform: capitalize; */
+   
+}
+.email {
+    text-decoration: none;
+    color: white;
+    display: inline;
+}
+
+.email:hover {
+    color: #2814e1;
+
+
+}
+
 .skills{
     flex-direction: column;
+    text-align: center;
 }
 .skills-item h2 {
     font-size: .9rem;
 }
-.item-1 h2 {
-    padding-left: 1rem;
-}
 .item-1{
-    margin: 0rem;
+    /* margin: 0rem; */
 }
 .skills-item p {
-    width: 100%;
+    width: 95%;
     padding-top:2rem;
     margin-bottom: 2rem;
     font-size: .7rem;
-    /* text-align: center; */
     
 }
 .item-2 {
@@ -350,37 +440,14 @@ footer .circle:hover {
 
 
 
-    /* VERY SMALL MOBILE DEVICES */
-    @media screen  and (max-width: 320px ){
-    .container {
-        display: inline;
-        text-align: center;
-        margin: 0 auto;
-        
-       
-    }
-    .logo {
-        font-size: .8rem;
-    }
-    .nav-ul {
-        text-align: center;
-    }
-    .nav-links {
-        font-size: .4rem;
-        font-weight: 100;
-        padding: 0;
-        margin-left: 1rem;
-        text-align: center;
-    }
-
 
     
 }
 
-{
 
 
-}
+
+
 
 
 

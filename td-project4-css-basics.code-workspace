@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../TimerApp"
+		},
+		{
+			"path": "../Documents/project/Shortly"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "td-project4-css-basics"
+	}
+}
